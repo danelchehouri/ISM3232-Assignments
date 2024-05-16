@@ -1,0 +1,20 @@
+public class TipCalculator {
+    public static void main(String[] args) {
+        // Test data - bill values
+        int[] billValues = {275, 40, 430};
+        // Tip percentage for bill values between 50 and 300
+        double tipPercentage = 0.15;
+        double tip;
+
+        // Loop through each bill value in the test data
+        for (int billValue : billValues) {
+            // Calculate tip using ternary operator
+            // If bill value is between 50 and 300, use 15% tip, otherwise use 20% tip
+            tip = (billValue >= 50 && billValue <= 300) ? billValue * tipPercentage : billValue * 0.2;
+            // Calculate total bill value including tip
+            double total = billValue + tip;
+            // Print the result to the console
+            System.out.println("The bill was " + billValue + ", the tip was " + tip + ", and the total value " + total);
+        }
+    }
+}
